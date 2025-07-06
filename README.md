@@ -147,5 +147,3 @@ This project is licensed under the **GNU GPL v3**. See [LICENSE](./LICENSE) for 
 
 Give it a ⭐, fork it, rice it, and tag me if you post your setup!
 
-```
-
