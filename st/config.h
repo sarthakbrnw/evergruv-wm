@@ -105,44 +105,40 @@ char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+  /* 8 normal colors */
+  [0] = "#1e222a", /* black   */
+  [1] = "#e06c75", /* red     */
+  [2] = "#98c379", /* green   */
+  [3] = "#d8a657", /* yellow  (from gruvbox) */
+  [4] = "#61afef", /* blue    */
+  [5] = "#c678dd", /* magenta */
+  [6] = "#56b6c2", /* cyan    */
+  [7] = "#abb2bf", /* white   */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 bright colors */
+  [8]  = "#5c6370", /* bright black   */
+  [9]  = "#f2846b", /* bright red     */
+  [10] = "#7ec7a2", /* bright green   */
+  [11] = "#f2c17d", /* bright yellow  */
+  [12] = "#528bff", /* bright blue    */
+  [13] = "#d67ad2", /* bright magenta */
+  [14] = "#8abeb7", /* bright cyan    */
+  [15] = "#ffffff", /* bright white   */
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+  /* special colors */
+  [256] = "#0d1117", /* background (GitHub Dark base) */
+  [257] = "#c9d1d9", /* foreground */
+  [258] = "#528bff", /* cursor     */
 };
 
-
 /*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+  * Default colors (colorname index)
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 258;
+unsigned int defaultrcs = 258;
 
 /*
  * Default shape of cursor
