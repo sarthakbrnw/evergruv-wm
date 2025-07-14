@@ -1,5 +1,16 @@
---- dwm.c
-+++ dwm.c
+From 8b5466b921242f0c83376c525d4a20b100a405f8 Mon Sep 17 00:00:00 2001
+From: Bang Lee <qusicx@gmail.com>
+Date: Thu, 22 May 2025 14:05:36 -0700
+Subject: [PATCH] statusbar on all monitors
+
+---
+ dwm.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/dwm.c b/dwm.c
+index 2829160..725e68b 100644
+--- a/dwm.c
++++ b/dwm.c
 @@ -707,7 +707,7 @@ drawbar(Monitor *m)
  		return;
  
@@ -22,3 +33,6 @@
  }
  
  void
+-- 
+2.49.0
+
